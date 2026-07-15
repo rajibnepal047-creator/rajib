@@ -1,0 +1,771 @@
+/*==========================
+ GOOGLE FONT
+==========================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f8fc;
+    color:#333;
+    overflow-x:hidden;
+}
+
+/*==========================
+ NAVBAR
+==========================*/
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:999;
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(12px);
+}
+
+nav{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:80px;
+}
+
+.logo{
+    font-size:30px;
+    color:white;
+    font-weight:700;
+}
+
+.logo i{
+    color:#ffd700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin:0 15px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+    position:relative;
+}
+
+nav ul li a:hover{
+    color:#00d9ff;
+}
+
+nav ul li a::after{
+
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+height:2px;
+width:0%;
+background:#00d9ff;
+transition:.4s;
+
+}
+
+nav ul li a:hover::after{
+
+width:100%;
+
+}
+
+.btn{
+
+padding:12px 30px;
+background:#00bfff;
+color:white;
+text-decoration:none;
+border-radius:40px;
+transition:.4s;
+font-weight:600;
+
+}
+
+.btn:hover{
+
+background:#0077b6;
+transform:translateY(-5px);
+
+box-shadow:0 15px 30px rgba(0,0,0,.3);
+
+}
+
+/*==========================
+ HERO
+==========================*/
+
+.hero{
+
+height:100vh;
+
+background:url("https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1600")
+center/cover no-repeat;
+
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+
+}
+
+.overlay{
+
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.55);
+
+}
+
+.hero-content{
+
+position:relative;
+z-index:5;
+text-align:center;
+color:white;
+width:80%;
+
+animation:fadeUp 1.5s;
+
+}
+
+.hero h1{
+
+font-size:70px;
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:22px;
+margin-bottom:40px;
+
+}
+
+.search-box{
+
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+
+}
+
+.search-box input,
+.search-box select{
+
+padding:18px;
+width:250px;
+border:none;
+border-radius:40px;
+outline:none;
+font-size:16px;
+
+}
+
+.search-box button{
+
+padding:18px 35px;
+background:#00b4d8;
+color:white;
+border:none;
+border-radius:40px;
+cursor:pointer;
+transition:.4s;
+
+}
+
+.search-box button:hover{
+
+background:#0077b6;
+
+transform:scale(1.08);
+
+}
+
+/*==========================
+ SECTION
+==========================*/
+
+.section{
+
+padding:100px 10%;
+
+}
+
+.section h2{
+
+text-align:center;
+
+font-size:45px;
+
+margin-bottom:60px;
+
+color:#023047;
+
+position:relative;
+
+}
+
+.section h2::after{
+
+content:"";
+
+width:90px;
+height:5px;
+background:#00b4d8;
+
+display:block;
+
+margin:15px auto;
+
+border-radius:10px;
+
+}
+
+/*==========================
+ DESTINATION CARDS
+==========================*/
+
+.card-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:35px;
+
+}
+
+.card{
+
+background:white;
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+transition:.5s;
+
+}
+
+.card:hover{
+
+transform:translateY(-15px);
+
+}
+
+.card img{
+
+width:100%;
+height:250px;
+object-fit:cover;
+
+transition:.6s;
+
+}
+
+.card:hover img{
+
+transform:scale(1.1);
+
+}
+
+.card-content{
+
+padding:25px;
+
+}
+
+.card h3{
+
+font-size:28px;
+margin-bottom:15px;
+
+}
+
+.card p{
+
+line-height:1.7;
+
+margin-bottom:20px;
+
+}
+
+.card a{
+
+display:inline-block;
+
+padding:10px 22px;
+
+background:#0096c7;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:30px;
+
+transition:.3s;
+
+}
+
+.card a:hover{
+
+background:#023047;
+
+}
+
+/*==========================
+ HOTEL
+==========================*/
+
+.hotel-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+}
+
+.hotel{
+
+background:white;
+
+padding:35px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 15px 30px rgba(0,0,0,.1);
+
+transition:.5s;
+
+}
+
+.hotel:hover{
+
+transform:translateY(-10px);
+
+}
+
+.hotel h3{
+
+margin-bottom:15px;
+
+}
+
+.hotel button{
+
+margin-top:20px;
+
+padding:12px 28px;
+
+border:none;
+
+background:#00b4d8;
+
+color:white;
+
+border-radius:30px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.hotel button:hover{
+
+background:#023047;
+
+}
+/*==========================
+BOOKING SECTION
+==========================*/
+
+.booking{
+    padding:100px 10%;
+    background:linear-gradient(135deg,#0096c7,#023e8a);
+    color:white;
+    text-align:center;
+}
+
+.booking h2{
+    font-size:42px;
+    margin-bottom:40px;
+}
+
+.booking form{
+    max-width:900px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.booking input{
+    padding:18px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    font-size:16px;
+}
+
+.booking button{
+    padding:18px;
+    border:none;
+    border-radius:10px;
+    background:#ffb703;
+    color:#000;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.booking button:hover{
+    background:#ffd60a;
+    transform:translateY(-5px);
+}
+
+/*==========================
+RESTAURANTS
+==========================*/
+
+.restaurant-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.restaurant{
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    transition:.4s;
+}
+
+.restaurant:hover{
+    transform:translateY(-10px);
+}
+
+.restaurant h3{
+    color:#023047;
+    margin-bottom:10px;
+}
+
+/*==========================
+ROUTES
+==========================*/
+
+.route-box{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.route-box ul{
+    list-style:none;
+}
+
+.route-box li{
+    padding:15px;
+    font-size:18px;
+    border-bottom:1px solid #ddd;
+}
+
+.route-box li:last-child{
+    border-bottom:none;
+}
+
+/*==========================
+SHOPPING
+==========================*/
+
+.shop-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.shop{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    transition:.4s;
+}
+
+.shop:hover{
+    transform:scale(1.05);
+}
+
+.shop h3{
+    color:#0077b6;
+    margin-bottom:15px;
+}
+
+/*==========================
+GALLERY
+==========================*/
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.5s;
+    cursor:pointer;
+}
+
+.gallery img:hover{
+    transform:scale(1.08);
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+
+/*==========================
+REVIEWS
+==========================*/
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.review{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    transition:.4s;
+}
+
+.review:hover{
+    transform:translateY(-10px);
+}
+
+.review h4{
+    margin-top:15px;
+    color:#0077b6;
+}
+
+/*==========================
+CONTACT
+==========================*/
+
+.contact{
+    padding:100px 10%;
+    background:#edf6f9;
+}
+
+.contact h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#023047;
+}
+
+.contact form{
+    max-width:800px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.contact input,
+.contact textarea{
+    padding:18px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+}
+
+.contact textarea{
+    height:180px;
+    resize:none;
+}
+
+.contact button{
+    padding:18px;
+    background:#0096c7;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:18px;
+    transition:.4s;
+}
+
+.contact button:hover{
+    background:#023047;
+}
+
+/*==========================
+FOOTER
+==========================*/
+
+footer{
+    background:#023047;
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-size:16px;
+}
+
+/*==========================
+ANIMATIONS
+==========================*/
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.card,
+.hotel,
+.restaurant,
+.shop,
+.review{
+    animation:fadeUp 1s ease;
+}
+
+/*==========================
+RESPONSIVE DESIGN
+==========================*/
+
+@media(max-width:992px){
+
+    nav{
+        flex-direction:column;
+        height:auto;
+        padding:20px 0;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        margin:20px 0;
+    }
+
+    .hero h1{
+        font-size:50px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+}
+
+@media(max-width:768px){
+
+    .hero{
+        height:90vh;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .search-box{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .search-box input,
+    .search-box select,
+    .search-box button{
+        width:100%;
+        max-width:350px;
+    }
+
+    .section{
+        padding:70px 7%;
+    }
+
+    .section h2{
+        font-size:34px;
+    }
+
+    .booking h2{
+        font-size:34px;
+    }
+}
+
+@media(max-width:480px){
+
+    .logo{
+        font-size:22px;
+    }
+
+    nav ul li{
+        margin:8px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .btn{
+        padding:10px 20px;
+    }
+
+    .card img,
+    .gallery img{
+        height:200px;
+    }
+}
